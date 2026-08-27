@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Character Motion Swap — YCO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ Header ============ -->
+<header class="site-header">
+  <div class="site-header__left">
+    <button class="header-hamburger" id="hamburgerBtn" aria-label="menu"><img src="assets/YCO/icons/mb_nav.png" alt=""></button>
+    <a href="#" class="site-header__logo">
+      <img src="assets/YCO/logos/Logo.png" alt="YCO logo">
+    </a>
+    <nav class="main-nav">
+      <a class="main-nav__link" href="#">Product</a>
+      <a class="main-nav__link" href="#">Use Case</a>
+      <a class="main-nav__link" href="#">API</a>
+      <a class="main-nav__link" href="#">Pricing</a>
+    </nav>
+  </div>
+  <div class="site-header__right">
+    <a class="btn btn-primary btn-header" href="#">Log In / Sign Up</a>
+  </div>
+</header>
+
+<!-- ============ Mobile side menu ============ -->
+<div class="mobile-menu-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu__top">
+    <img src="assets/YCO/logos/mb_Logo.png" alt="YCO logo" class="mobile-menu__logo">
+    <button class="mobile-menu__close" id="mobileMenuClose" aria-label="close"><img src="assets/YCO/icons/mb_nav_close.png" alt=""></button>
+  </div>
+  <a class="mobile-menu__link" href="#">Log In / Sign Up</a>
+  <a class="mobile-menu__link" href="#">Product</a>
+  <a class="mobile-menu__link" href="#">Use Case</a>
+  <a class="mobile-menu__link" href="#">API</a>
+  <a class="mobile-menu__link" href="#">Pricing</a>
+</div>
+
+<main>
+
+  <!-- ============ Topbanner ============ -->
+  <section class="topbanner">
+    <div class="topbanner__media-group">
+      <!-- Desktop: full-width video with empty right-side space reserved for the text -->
+      <video class="topbanner__media topbanner__media--video topbanner__media--desktop is-active" data-option="a" autoplay loop muted playsinline>
+        <source src="assets/page/video/topbanner-a.mp4" type="video/mp4">
+      </video>
+      <video class="topbanner__media topbanner__media--video topbanner__media--desktop" data-option="b" autoplay loop muted playsinline>
+        <source src="assets/page/video/topbanner-b.mp4" type="video/mp4">
+      </video>
+      <!-- Tablet/Mobile: dedicated footage (text moves to a block below instead) -->
+      <video class="topbanner__media topbanner__media--video topbanner__media--mobile is-active" data-option="a" autoplay loop muted playsinline>
+        <source src="assets/page/video/topbanner-a-mobile.mp4" type="video/mp4">
+      </video>
+      <video class="topbanner__media topbanner__media--video topbanner__media--mobile" data-option="b" autoplay loop muted playsinline>
+        <source src="assets/page/video/topbanner-b-mobile.mp4" type="video/mp4">
+      </video>
+      <div class="topbanner__switcher" role="tablist" aria-label="Topbanner 版本選擇（僅供 review 用，非正式頁面元件）">
+        <button class="topbanner__switch-btn is-active" data-option="a" data-text="light" type="button">Option A</button>
+        <button class="topbanner__switch-btn" data-option="b" data-text="dark" type="button">Option B</button>
+      </div>
+    </div>
+    <div class="topbanner__content is-light-text" id="topbannerContent">
+      <div class="topbanner__content-inner">
+        <h1>AI Character Motion Swap</h1>
+        <p>Turn any still photo into motion, or swap your character into any video scene - no filming, rigging, or animation skills required.</p>
+        <a class="btn btn-primary btn-topbanner-cta" href="#">Animate Your Photo</a>
+        <div class="app-badges">
+          <a href="#"><img src="assets/YCO/icons/apple.png" alt="Download on the App Store"></a>
+          <a href="#"><img src="assets/YCO/icons/google play.png" alt="Get it on Google Play"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Intro: From Photo to Motion ============ -->
+  <section class="section intro">
+    <div class="container intro__head">
+      <h2>From Photo to Motion: AI Character Motion Swap</h2>
+      <p class="intro__sub">Upload a photo and a video, and your character starts moving just like the clip you picked - no filming, no animation skills needed.</p>
+    </div>
+    <div class="container intro__body">
+      <div class="intro__text">
+        <ul class="intro__list">
+          <li><strong>Natural Motion:</strong> Your character moves smoothly and realistically, matching the reference video.</li>
+          <li><strong>Still Looks Like You:</strong> Faces, proportions, and style carry through, so the result still looks like your original photo or character.</li>
+          <li><strong>Multiple AI Models:</strong> Choose from a range of models, each tuned for a result - character motion control, replacing the character in a video, or applying video motion to an image.</li>
+          <li><strong>Ready-Made Templates:</strong> No reference video on hand? Pick a ready-made motion template and apply it instantly.</li>
+        </ul>
+        <a class="btn btn-outline" href="#">Try It Now</a>
+      </div>
+      <div class="intro__media">
+        <video autoplay loop muted playsinline>
+          <source src="assets/page/video/intro-demo.webm" type="video/webm">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ How to Use (Steps) ============ -->
+  <section class="section steps-section">
+    <div class="container">
+      <h2 class="steps-title">How to Use AI Character Motion Swap</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step__num"><span class="step__label">STEP</span><span class="step__digit">1</span></div>
+          <div class="step__icon step__icon--img"><img src="assets/page/step/step01.png" alt=""></div>
+          <h3 class="step__title">Choose a Model</h3>
+          <p class="step__desc">Pick the model built for your goal: Character Motion Control, Replace the Character in a Video, or Apply Video Motion to an Image.</p>
+        </div>
+        <div class="step">
+          <div class="step__num"><span class="step__label">STEP</span><span class="step__digit">2</span></div>
+          <div class="step__icon step__icon--img"><img src="assets/page/step/step02.png" alt=""></div>
+          <h3 class="step__title">Upload a Motion Reference Video</h3>
+          <p class="step__desc">Add a source video with the movement you want to apply — a gesture, a performance, or a dance.</p>
+        </div>
+        <div class="step">
+          <div class="step__num"><span class="step__label">STEP</span><span class="step__digit">3</span></div>
+          <div class="step__icon step__icon--img"><img src="assets/page/step/step03.png" alt=""></div>
+          <h3 class="step__title">Upload Your Photo</h3>
+          <p class="step__desc">Upload the photo you want to animate — a portrait, a character illustration, or any image with a clear subject.</p>
+        </div>
+        <div class="step">
+          <div class="step__num"><span class="step__label">STEP</span><span class="step__digit">4</span></div>
+          <div class="step__icon step__icon--img"><img src="assets/page/step/step04.png" alt=""></div>
+          <h3 class="step__title">Generate and Save</h3>
+          <p class="step__desc">Click Generate, preview your result, and download it in HD — or find it saved in My Gallery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ============ 3 Ways to Use (Zig-zag) ============ -->
+  <section class="section zigzag-section">
+    <div class="container">
+      <h2 class="zigzag-title">Turn Any Photo Into Motion — 3 Ways to Use AI Character Motion Swap</h2>
+
+      <div class="zigzag">
+        <div class="zigzag__row">
+          <div class="zigzag__text">
+            <span class="zigzag__num">
+              <span class="zigzag__num-big">01</span>
+              <span class="zigzag__num-small">03</span>
+              <svg class="zigzag__num-slash" viewBox="0 0 69 76.5" preserveAspectRatio="none"><line x1="69" y1="0" x2="0" y2="76.5" stroke="#292621" stroke-width="1.5"/></svg>
+            </span>
+            <h3>Make Any Photo Move</h3>
+            <p>Upload a reference video — a dance clip, a walking shot, a simple gesture — and pair it with your photo. AI Character Motion Swap builds a video from that reference and applies the motion to your image. A strong fit for TikTok, Reels, and Shorts, where dynamic motion holds attention.</p>
+            <a class="btn btn-primary" href="#">Try It Now</a>
+          </div>
+          <div class="zigzag__media">
+            <video autoplay loop muted playsinline>
+              <source src="assets/page/video/usecase-01.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
+
+        <div class="zigzag__row">
+          <div class="zigzag__media">
+            <video autoplay loop muted playsinline>
+              <source src="assets/page/video/usecase-02.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="zigzag__text">
+            <span class="zigzag__num">
+              <span class="zigzag__num-big">02</span>
+              <span class="zigzag__num-small">03</span>
+              <svg class="zigzag__num-slash" viewBox="0 0 69 76.5" preserveAspectRatio="none"><line x1="69" y1="0" x2="0" y2="76.5" stroke="#292621" stroke-width="1.5"/></svg>
+            </span>
+            <h3>Give Any Character Real Motion</h3>
+            <p>Animate illustrated or AI-generated characters without 3D modeling or frame-by-frame drawing. Upload your character image and a reference video, and get smooth motion that mirrors every move — faces, proportions, and art style stay consistent from first frame to last. Useful for storytelling, avatars, and short-form animation.</p>
+            <a class="btn btn-primary" href="#">Try It Now</a>
+          </div>
+        </div>
+
+        <div class="zigzag__row">
+          <div class="zigzag__text">
+            <span class="zigzag__num">
+              <span class="zigzag__num-big">03</span>
+              <span class="zigzag__num-small">03</span>
+              <svg class="zigzag__num-slash" viewBox="0 0 69 76.5" preserveAspectRatio="none"><line x1="69" y1="0" x2="0" y2="76.5" stroke="#292621" stroke-width="1.5"/></svg>
+            </span>
+            <h3>Swap Yourself Into Any Scene</h3>
+            <p>Skip the filming and the manual masking. Upload your photo alongside any action clip, and your character replaces the original performer while keeping the clip's motion, gestures, and camera movement intact. Built for memes, reaction videos, and social content where believable motion is the whole point.</p>
+            <a class="btn btn-primary" href="#">Try It Now</a>
+          </div>
+          <div class="zigzag__media">
+            <video autoplay loop muted playsinline>
+              <source src="assets/page/video/usecase-03.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ============ FAQ ============ -->
+  <section class="section faq-section">
+    <div class="container">
+      <h2 class="faq-title">AI Character Motion Swap FAQs</h2>
+      <div class="faq-list">
+        <div class="faq-item is-open">
+          <button class="faq-item__q">
+            <span>What is AI Character Motion Swap?</span>
+            <img class="faq-item__chevron" src="assets/YCO/icons/Icon_open.svg" alt="">
+          </button>
+          <div class="faq-item__a"><p>It's a motion transfer tool that reads the movement in a reference video - gestures, dance, performance, or full-body motion — and applies it to your uploaded photo or character image, generating a new animated video.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q">
+            <span>How do I use AI Character Motion Swap?</span>
+            <img class="faq-item__chevron" src="assets/YCO/icons/Icon_close.svg" alt="">
+          </button>
+          <div class="faq-item__a"><p>Choose a model, upload a motion reference video, upload your photo, then generate and save — see the 4-step guide above for details.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q">
+            <span>Is AI Character Motion Swap free to use?</span>
+            <img class="faq-item__chevron" src="assets/YCO/icons/Icon_close.svg" alt="">
+          </button>
+          <div class="faq-item__a"><p>A limited number of free generations are available; higher-resolution exports and additional models require a paid plan. See Pricing for details.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q">
+            <span>Can I use AI Character Motion Swap on mobile?</span>
+            <img class="faq-item__chevron" src="assets/YCO/icons/Icon_close.svg" alt="">
+          </button>
+          <div class="faq-item__a"><p>Yes, it works in the mobile app and mobile browser in addition to desktop.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q">
+            <span>What can the different AI models do?</span>
+            <img class="faq-item__chevron" src="assets/YCO/icons/Icon_close.svg" alt="">
+          </button>
+          <div class="faq-item__a"><p>Each model is tuned for a different result: controlling a character's motion, replacing the character in an existing video, or applying a video's motion onto a still image.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q">
+            <span>How do I get the best results?</span>
+            <img class="faq-item__chevron" src="assets/YCO/icons/Icon_close.svg" alt="">
+          </button>
+          <div class="faq-item__a"><p>Use a clear, well-lit photo with a visible subject and a reference video with clean, unobstructed motion for the most accurate results.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q">
+            <span>Should I use AI Character Motion Swap or an image-to-video tool?</span>
+            <img class="faq-item__chevron" src="assets/YCO/icons/Icon_close.svg" alt="">
+          </button>
+          <div class="faq-item__a"><p>Use AI Character Motion Swap when you want to control motion with a specific reference video or template. Use a general image-to-video tool when you just want AI-generated movement without a reference.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q">
+            <span>Can I animate illustrations or AI-generated characters, not just real photos?</span>
+            <img class="faq-item__chevron" src="assets/YCO/icons/Icon_close.svg" alt="">
+          </button>
+          <div class="faq-item__a"><p>Yes, illustrated and AI-generated character images are supported alongside real photos.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__q">
+            <span>Is there a limit on reference video length?</span>
+            <img class="faq-item__chevron" src="assets/YCO/icons/Icon_close.svg" alt="">
+          </button>
+          <div class="faq-item__a"><p>Yes, reference videos have a maximum supported length; trim longer clips to the key motion segment before uploading.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ Footer ============ -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <img src="assets/YCO/logos/footer_logo.png" alt="YCO logo" class="site-footer__logo">
+      <p class="site-footer__copyright">2023 © Perfect Corp. All Rights Reserved.</p>
+      <button class="lang-switch" id="langSwitchBtn">
+        <img src="assets/YCO/icons/ico_language.png" alt="">
+        <img class="lang-switch__chevron" src="assets/YCO/icons/Icon_close.svg" alt="">
+      </button>
+    </div>
+    <div class="site-footer__cols">
+      <div class="site-footer__col">
+        <p class="site-footer__col-title">Product</p>
+        <a href="#">Photo Enhance</a>
+        <a href="#">Object removal</a>
+        <a href="#">Remove background</a>
+        <a href="#">Colorize</a>
+        <a href="#">Lighting</a>
+      </div>
+      <div class="site-footer__col">
+        <p class="site-footer__col-title">Support</p>
+        <a href="#">Pricing</a>
+        <a href="#">Mobile download</a>
+        <a href="#">Blogs</a>
+        <a href="#">FAQ</a>
+      </div>
+      <div class="site-footer__col">
+        <p class="site-footer__col-title">Legal</p>
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of use</a>
+        <a href="#">Legal notice</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
